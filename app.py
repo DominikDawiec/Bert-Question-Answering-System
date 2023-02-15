@@ -92,7 +92,7 @@ def get_pipeline():
     modelname = "deepset/bert-base-cased-squad2"
     model_qa = BertForQuestionAnswering.from_pretrained(modelname)
     # model_qa.save_pretrained(modelname)
-    tokenizer = AutoTokenizer.from_pretrained("tokenizer-deepset")
+    tokenizer = AutoTokenizer.from_pretrained("tokenizer_deepset")
     # tokenizer.save_pretrained("tokenizer-" + modelname)
     qa = pipeline("question-answering", model=model_qa, tokenizer=tokenizer)
     return qa
